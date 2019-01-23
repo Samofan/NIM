@@ -8,15 +8,14 @@ namespace NIM
 {
     class Program
     {
+        //numbers
+        int sticks;
+        
         static void Main(string[] args)
         {
             //player Strings
             String player1;
             String player2;
-            
-            //numbers
-            int sticks;
-
 
             //open console and save names
             Console.WriteLine("NIM (press Enter)");
@@ -32,9 +31,9 @@ namespace NIM
             Console.WriteLine("Hallo " + player1 + " und " + player2);
             
             //user manual
-            Console.WriteLine("Wisst Ihr, wie das Spiel funktioniert? (y/n)")
+            Console.WriteLine("Wisst Ihr, wie das Spiel funktioniert? (y/n)");
             if (Console.ReadLine() == "y") {
-            
+                //do nothing
             }
             else if (Console.ReadLine() == "n") {
                 Console.Clear();
@@ -43,13 +42,24 @@ namespace NIM
             else {
                 Console.WriteLine("Ungültige Eingabe");
             }
+            Console.WriteLine("Alles klar. Auf gehts. Mit wie vielen Stöcken soll gespielt werden?");
+            sticks = ConvertToInt32(Console.ReadLine());
             
             //draw sticks
+            drawSticks();
             
-        }
-        
-        public void showManual() {
-            Console.WriteLine("Ihr habt Stöcke vor euch. Nacheinander wird gezogen. Ihr dürft ein oder zwei Stöcke ziehen.");
+	}
+	
+	public static void showManual() {
+		Console.WriteLine("Vor Euch liegen Stöcke. Von denen könnt Ihr jeweils ein oder zwei Stöcke ziehen. Wer den letzten Stock zieht hat verloren.");
+        Console.ReadLine();
+        Console.Clear();
+	}
+    
+    public void drawSticks() {
+        for (int i = 0; i < sticks; i++) {
+            Console.Write("|");
         }
     }
+  }
 }
