@@ -15,63 +15,41 @@ namespace NIM
             String player2;
             
             //numbers
-            int numbers = 10;
-            String[] numbersArray = new String[] { "1 ","2 ","3 ","4 ","5 ","6 ","7 ","8 ","9 ","10" };
+            int sticks;
 
 
             //open console and save names
             Console.WriteLine("NIM (press Enter)");
             Console.ReadLine();
+            Console.Clear();
 
             Console.WriteLine("Wie heißt Spieler1?");
             player1 = Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Wie heißt Spieler2?");
             player2 = Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Hallo " + player1 + " und " + player2);
-            WriteFullLineGreen(player1 + ", deine Farbe ist grün.");
-            WriteFullLineRed(player2 + ", deine Farbe ist rot.");
-
-            Console.WriteLine(string.Join("", numbersArray));
-
-            Console.ReadLine();
-
-            DeleteOneDigit(numbersArray);
-
             
+            //user manual
+            Console.WriteLine("Wisst Ihr, wie das Spiel funktioniert? (y/n)")
+            if (Console.ReadLine() == "y") {
             
+            }
+            else if (Console.ReadLine() == "n") {
+                Console.Clear();
+                showManual();
+            }
+            else {
+                Console.WriteLine("Ungültige Eingabe");
+            }
             
-            //while (numbers > 0)
-            //{
-
-            //}
-
-
-
-            Console.ReadLine();
-
+            //draw sticks
+            
         }
-
-        String[] DeleteOneDigit(String[] value)
-        {
-            List<> list = new List<list>(value);
-            list.RemoveAt(0);
-            String[] list.ToArray();
-        }
-
-        static void WriteFullLineGreen(string value)
-        {
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine(value.PadRight(Console.WindowWidth - 1)); // <-- see note
-            
-            Console.ResetColor();
-        }
-
-        static void WriteFullLineRed(string value)
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(value.PadRight(Console.WindowWidth - 1)); // <-- see note
-
-            Console.ResetColor();
+        
+        public void showManual() {
+            Console.WriteLine("Ihr habt Stöcke vor euch. Nacheinander wird gezogen. Ihr dürft ein oder zwei Stöcke ziehen.");
         }
     }
 }
