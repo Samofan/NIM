@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NIM
+{
+    class Program
+    {
+         public static void startGame(int sticks, int counter, string player1, string player2 ){
+            while (sticks > 0)
+            {
+                if (counter % 2 == 0) {
+                        // spieler 1
+                }
+                else if (counter % 2 != 0) { 
+                 //spieler2
+                }
+
+            }
+         }
+
+        static void Main(string[] args)
+        {
+
+            start();
+            
+
+        }
+
+        public static void drawSticks(int sticks)
+        {
+            for (int i = 0; i < sticks; i++)
+            {
+                Console.Write("|");
+            }
+        }
+
+        public int delete(int sticks, int take)
+        {
+                sticks = sticks - take;
+                return sticks;
+        }
+
+        public static void start(){
+        //player Strings
+            String player1 = null;
+            String player2 = null;
+
+            //numbers
+            int sticks;
+            int counter = 1;
+
+            //open console and save names
+            Console.WriteLine("NIM (press Enter)");
+            Console.ReadLine();
+            Console.Clear();
+
+            for (int i = 1; i < 3; i++)
+            {
+                Console.WriteLine("Wie heißt Spieler " + i + "?");
+                if (i == 1)
+                {
+                    player1 = Console.ReadLine();
+                }
+                else
+                {
+                    player2 = Console.ReadLine();
+                }
+                Console.Clear();
+            }
+
+            Console.WriteLine("Hallo " + player1 + " und " + player2 + "!");
+
+            Console.WriteLine("Alles klar. Auf gehts. Mit wie vielen Stöcken soll gespielt werden?");
+            sticks = Convert.ToInt32(Console.ReadLine());
+
+            //draw sticks
+            drawSticks(sticks);
+            Console.ReadLine();
+            startGame(sticks, counter, player1, player2);
+
+        }
+       
+    }
+}
