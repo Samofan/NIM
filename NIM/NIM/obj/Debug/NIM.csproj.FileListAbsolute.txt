@@ -1,0 +1,7 @@
+E:\DEVELOPMENT\VisualStudioProjects\NIM\NIM\bin\Debug\NIM.exe.config
+E:\DEVELOPMENT\VisualStudioProjects\NIM\NIM\bin\Debug\NIM.exe
+E:\DEVELOPMENT\VisualStudioProjects\NIM\NIM\bin\Debug\NIM.pdb
+E:\DEVELOPMENT\VisualStudioProjects\NIM\NIM\obj\Debug\NIM.csprojAssemblyReference.cache
+E:\DEVELOPMENT\VisualStudioProjects\NIM\NIM\obj\Debug\NIM.csproj.CoreCompileInputs.cache
+E:\DEVELOPMENT\VisualStudioProjects\NIM\NIM\obj\Debug\NIM.exe
+E:\DEVELOPMENT\VisualStudioProjects\NIM\NIM\obj\Debug\NIM.pdb
